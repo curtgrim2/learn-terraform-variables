@@ -119,3 +119,10 @@ module "ec2_instances" {
     environment = "development"
   }
 }
+
+module "s3-bucket-cg-2" {
+  source  = "app.terraform.io/policy-as-code-training/s3-bucket-cg-2/aws"
+  version = "1.0.0"
+  bucket_name="cg-2-bucket"
+  # insert required variables here
+}
